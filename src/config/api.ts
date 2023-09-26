@@ -1,0 +1,5 @@
+export const API_URL = process.env.NEXT_PUBLIC_API_URL_PATH; 
+export const API_URL_ALLJOPS = process.env.NEXT_PUBLIC_API_URL_PATH_ALLJOPS;
+export const API_URL_USERDATA = process.env.NEXT_PUBLIC_API_URL_PATH_USERDATA;
+export const API_URL_SAVEDJOBS= process.env.NEXT_PUBLIC_API_URL_PATH_SAVEDJOBS;
+
