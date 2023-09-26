@@ -1,0 +1,247 @@
+{
+  "allJops": [
+    {
+      "id": 1,
+      "title": "Need freelancer for host apps.",
+      "description": "Hey, I need someone's help for publish my app on google play using draft. If you are interested, share your live app url so I can check the account. i will pay them fixed or monthly rent both. Thanks",
+      "jobSkills": [
+        "Java",
+        "Kotlin",
+        "JavaScript",
+        "Android",
+        "iOS",
+        "Smartphone"
+      ],
+      "complexity": "hard",
+      "jobType": "Fixed-price",
+      "deadLine": "1 to 3 months",
+      "levelExperience": "Entry level",
+      "hiringType": "full time",
+      "budget": {
+        "hourly": {
+          "from": 14,
+          "to": 25
+        },
+        "fixed": 35
+      },
+      "image": "",
+      "proposals": "less than 5",
+      "country": "United States",
+      "postTime": "Posted 1 minutes ago"
+    },
+    {
+      "id": 2,
+      "title": "Remote - Node js + AWS developer - full time Contract",
+      "description": "Remote - Node JS. Developer - Full time Contract Responsibilities: Develop and maintain Node.js applications. Utilize AWS services for deployment and scalability. Collaborate with cross-functional teams. Requirements: 3+ years of Node.js experience.",
+      "jopSkills": [
+        "Node.js",
+        "API",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "ExpressJS"
+      ],
+      "complexity": "Intermediate",
+      "jobType": "Hourly",
+      "deadLine": "More than 6 months, Less than 30 hrs/week",
+      "levelExperience": "entry",
+      "hiringType": "full time",
+      "budget": {
+        "hourly": {
+          "from": 9,
+          "to": 10
+        },
+        "fixed": 40
+      },
+      "image": "",
+      "proposals": "5 to 10",
+      "country": "India",
+      "postTime": "Posted 2 minutes ago"
+    },
+    {
+      "id": 3,
+      "title": "Mobile App Developer Needed",
+      "description": "Looking for a mobile app developer to create a social networking app for iOS and Android platforms. Must have experience with React Native and be able to work independently. Remote work is acceptable.",
+      "jobSkills": [
+        "React Native",
+        "JavaScript",
+        "iOS",
+        "Android",
+        "Firebase"
+      ],
+      "complexity": "Intermediate",
+      "jobType": "Fixed-price",
+      "deadLine": "3 to 6 months",
+      "levelExperience": "Intermediate",
+      "hiringType": "part time",
+      "budget": {
+        "hourly": {
+          "from": 20,
+          "to": 35
+        },
+        "fixed": 3000
+      },
+      "image": "",
+      "proposals": "10 to 20",
+      "country": "Canada",
+      "postTime": "Posted 5 minutes ago"
+    },
+    {
+      "id": 4,
+      "title": "Web Designer Needed",
+      "description": "We are looking for a talented web designer to create a modern and responsive website for our business. Proficiency in HTML, CSS, and Adobe Creative Suite is required.",
+      "jobSkills": [
+        "HTML",
+        "CSS",
+        "Adobe Creative Suite",
+        "Web Design"
+      ],
+      "complexity": "Easy",
+      "jobType": "Fixed-price",
+      "deadLine": "1 to 2 months",
+      "levelExperience": "Entry level",
+      "hiringType": "full time",
+      "budget": {
+        "hourly": {
+          "from": 15,
+          "to": 25
+        },
+        "fixed": 1000
+      },
+      "image": "",
+      "proposals": "5 to 10",
+      "country": "United Kingdom",
+      "postTime": "Posted 10 minutes ago"
+    },
+    {
+      "id": 5,
+      "title": "Content Writer for Tech Blog",
+      "description": "We are seeking a skilled content writer to create engaging and informative articles for our tech blog. Must have knowledge of the latest technology trends and excellent writing skills.",
+      "jobSkills": [
+        "Content Writing",
+        "Technology",
+        "Blog Writing",
+        "SEO"
+      ],
+      "complexity": "Easy",
+      "jobType": "Hourly",
+      "deadLine": "Ongoing",
+      "levelExperience": "Intermediate",
+      "hiringType": "part time",
+      "budget": {
+        "hourly": {
+          "from": 10,
+          "to": 20
+        },
+        "fixed": null
+      },
+      "image": "",
+      "proposals": "5 to 15",
+      "country": "United States",
+      "postTime": "Posted 15 minutes ago"
+    },
+    {
+      "id": 6,
+      "title": "E-commerce Website Developer",
+      "description": "Looking for an experienced e-commerce website developer to build an online store from scratch. Knowledge of Shopify or WooCommerce is a plus.",
+      "jobSkills": [
+        "E-commerce",
+        "Web Development",
+        "Shopify",
+        "WooCommerce"
+      ],
+      "complexity": "Intermediate",
+      "jobType": "Fixed-price",
+      "deadLine": "4 to 7 months",
+      "levelExperience": "Advanced",
+      "hiringType": "full time",
+      "budget": {
+        "hourly": {
+          "from": null,
+          "to": null
+        },
+        "fixed": 5000
+      },
+      "image": "",
+      "proposals": "5 to 15",
+      "country": "Australia",
+      "postTime": "Posted 20 minutes ago"
+    },
+    {
+      "id": 7,
+      "title": "Digital Marketing Specialist",
+      "description": "We are in need of a digital marketing specialist to manage our online marketing campaigns, including SEO, SEM, and social media marketing. Must have a proven track record of driving results.",
+      "jobSkills": [
+        "Digital Marketing",
+        "SEO",
+        "SEM",
+        "Social Media Marketing",
+        "Google Ads"
+      ],
+      "complexity": "Intermediate",
+      "jobType": "Hourly",
+      "deadLine": "Ongoing",
+      "levelExperience": "Advanced",
+      "hiringType": "part time",
+      "budget": {
+        "hourly": {
+          "from": 25,
+          "to": 40
+        },
+        "fixed": null
+      },
+      "image": "",
+      "proposals": "10 to 20",
+      "country": "United States",
+      "postTime": "Posted 25 minutes ago"
+    }
+  ],
+  "savedJobs": [
+    {
+      "id": 6,
+      "title": "E-commerce Website Developer",
+      "description": "Looking for an experienced e-commerce website developer to build an online store from scratch. Knowledge of Shopify or WooCommerce is a plus.",
+      "jobSkills": [
+        "E-commerce",
+        "Web Development",
+        "Shopify",
+        "WooCommerce"
+      ],
+      "complexity": "Intermediate",
+      "jobType": "Fixed-price",
+      "deadLine": "4 to 7 months",
+      "levelExperience": "Advanced",
+      "hiringType": "full time",
+      "budget": {
+        "hourly": {
+          "from": null,
+          "to": null
+        },
+        "fixed": 5000
+      },
+      "image": "",
+      "proposals": "5 to 15",
+      "country": "Australia",
+      "postTime": "Posted 20 minutes ago"
+    }
+  ],
+  "userData": [
+    {
+      "id": 1,
+      "name": "Hazem A.",
+      "image": "/assets/images/ ",
+      "country": "Gaza, Palestinian Territories",
+      "jobTitle": "hhhhhhhh",
+      "hourlyRate": 15,
+      "userBiography": "Hi I'm Front End. Hello and thanks for visiting My upwork. I am a front-end developer and mostly I am passionate about web coding. I'm an expert in using coding languages. I will use my skill and knowledge to complete a project successfully.",
+      "userSkills": [
+        "Js",
+        "React",
+        "Next Js",
+        "Style Componet",
+        "MUI"
+      ],
+      "body": "dddd"
+    }
+  ]
+}
