@@ -58,4 +58,15 @@ const SmallText2 = styled.span`
   letter-spacing: 0.6px;
 `;
 
-export { BigHeading, MainHeading, Heading, Body, SmallText, SmallText2 };
+const VerySmall = styled.span`
+  font-family: ${theme.fonts.primary};
+  font-size: 12px; 
+  font-style: normal;
+  font-weight:  400;
+  color: ${theme.colors.colorGreenDark};
+  line-height: 18px;
+  letter-spacing: 0.6px;
+`;
+
+
+export { BigHeading, MainHeading, Heading, Body, SmallText, SmallText2, VerySmall };
