@@ -8,6 +8,7 @@ const lightColors = {
   colorGreenOfont: "#5e6d55",
   colorGreenPastel: "#E3F9EC",
   colorGray: "#222222",
+  colorGrayLight: "#E4EBE4",
   colorGrayCharcoal: "#8F8E8E",
   colorGrayishGreen: "#9AAA97",
   colorVeryLightGray: "#F2F7F2",
@@ -16,6 +17,7 @@ const lightColors = {
   colorBorder: "#D5E0D5",
   colorBlueNavy: "#1F57C3",
 };
+
 
 
 
