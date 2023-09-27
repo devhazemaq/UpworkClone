@@ -105,3 +105,94 @@ export const StyleForDialog = styled.div`
     }
   }
 `;
+
+export const StyleForDialogHourly = styled.div`
+  width: 750px;
+  height: 504px;
+  padding: 10px 20px;
+  .h_color {
+    color: ${theme.colors.colorGreenOfont};
+  }
+  .contain__hourly__and__iconX {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 10px 0;
+  }
+  .contain__note {
+    padding-top: 15px;
+    span {
+      display: block;
+      padding-bottom: 10px;
+    }
+    span:first-child {
+      padding-bottom: 10px;
+    }
+  }
+
+  .contain__filed__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-block: 40px;
+
+    .filed__1 {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 1px solid ${theme.colors.colorBorder};
+      .houly__text {
+        width: fit-content;
+        span {
+          display: block;
+        }
+      }
+      .houly__input {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .css-1iz4cux {
+          width: fit-content;
+        }
+      }
+    }
+  }
+  .contain__btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    button {
+      width: 96px;
+      height: 40px;
+      border-radius: 18px;
+    }
+
+    button:first-child {
+      color: ${theme.colors.colorGreenForest};
+    }
+    button:first-child:hover {
+      text-decoration: underline;
+    }
+    button:last-child {
+      background-color: ${theme.colors.colorGreenForest};
+    }
+  }
+
+  /* -s--- For Hrurly Rate --- */
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    width: 170px;
+    height: 40px;
+    padding: 0;
+    padding-right: 10px;
+    text-align: end;
+  }
+  /* -s--- For Hrurly Rate --- */
+
+  .input__faild2 {
+    background: ${theme.colors.colorGrayLight};
+  }
+`;
