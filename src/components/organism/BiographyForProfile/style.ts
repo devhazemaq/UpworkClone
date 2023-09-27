@@ -196,3 +196,82 @@ export const StyleForDialogHourly = styled.div`
     background: ${theme.colors.colorGrayLight};
   }
 `;
+
+export const StyleForDialogTextBiograph = styled.div`
+  width: 750px;
+  height: 570px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 17px;
+  .contain__title__and__iconX {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 10px 0;
+    border-bottom: 1px solid ${theme.colors.colorBorder};
+  }
+
+  .overview__contain {
+    
+    .overview__text__static {
+      padding-block: 30px 57px;
+
+      .tit__txt1 {
+        display: block;
+        padding-bottom: 1rem;
+      }
+      ul {
+        padding-left: 20px;
+
+        li {
+          padding-block: 6px;
+        }
+      }
+      .span__green {
+        color: ${theme.colors.colorGreenYellow};
+        display: block;
+        padding-bottom: 7px;
+      }
+      textarea {
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 2px solid ${theme.colors.colorGrayLight};
+      }      
+    }
+  }
+
+  .contain__btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    button {
+      width: 96px;
+      height: 40px;
+      border-radius: 18px;
+    }
+
+    button:first-child {
+      color: ${theme.colors.colorGreenForest};
+    }
+    button:first-child:hover {
+      text-decoration: underline;
+    }
+    button:last-child {
+      background-color: ${theme.colors.colorGreenForest};
+    }
+  }
+
+
+  
+  
+  
+
+
+
+
+`;
