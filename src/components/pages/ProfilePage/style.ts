@@ -14,7 +14,7 @@ export const StyleMainProfilePage = styled.div`
     padding: ${forPadding};
     margin-inline: ${forMargin};
     border: 1px solid ${theme.colors.colorBorder};
-    margin-top: 80px;
+    margin-top: 50px;
     border-radius: 16px 16px 0 0; 
     
     /* -s--- contain boxs avatar namedata --- */
