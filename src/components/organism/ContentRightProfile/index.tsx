@@ -4,9 +4,7 @@ import React from 'react'
 import { Chip } from '@mui/material'
 import EditIcon from '@mui/icons-material/Edit';
 import AddIcon from '@mui/icons-material/Add';
-
-import InsertLinkIcon from '@mui/icons-material/InsertLink';
-import { Body, Heading, MainHeading, SmallText2 } from '@/components/atoms/typography'
+import { Body, Heading, SmallText2 } from '@/components/atoms/typography'
 import Image from 'next/image'
 import { StyleMainContentRightProfile } from './style';
 import BiographyForProfile from '../BiographyForProfile';
