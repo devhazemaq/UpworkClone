@@ -1,7 +1,8 @@
 "use client";
 
 import { API_URL_USERDATA } from "@/config/api";
-import { Dispatch, PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import {AppDispatch} from "../store"
 import axios from "axios";
 
 export type userTypes = {
@@ -70,7 +71,7 @@ export const userSlice = createSlice({
 
 const { setLoading, setError, getUserInfo, updateJobTitle, updateHourlyRate, updateUserBiography } = userSlice.actions;
 
-export const getUserInfoAction = () => async (dispatch: Dispatch) => {
+export const getUserInfoAction = () => async (dispatch: AppDispatch) => {
   try {
     dispatch(setLoading());
     const { data } = await axios.get<userTypes[]>(`${API_URL_USERDATA}`);
@@ -83,7 +84,7 @@ export const getUserInfoAction = () => async (dispatch: Dispatch) => {
   }
 };
 
-export const updateJobTitleAcrion = (body:string) => async (dispatch: Dispatch) => {
+export const updateJobTitleAcrion = (body:string) => async (dispatch: AppDispatch) => {
   try{
     dispatch(setLoading());
     await axios.patch(`${API_URL_USERDATA}1`,{ jobTitle : body });
@@ -96,7 +97,7 @@ export const updateJobTitleAcrion = (body:string) => async (dispatch: Dispatch) 
     dispatch(setError(errorrr));
   }
 }
-export const updateHourlyRateAcrion = (body:string) => async (dispatch: Dispatch) => {
+export const updateHourlyRateAcrion = (body:string) => async (dispatch: AppDispatch) => {
   try{
     dispatch(setLoading());
     await axios.patch(`${API_URL_USERDATA}1`,{ hourlyRate : body });
@@ -110,7 +111,7 @@ export const updateHourlyRateAcrion = (body:string) => async (dispatch: Dispatch
   }
 }
 
-export const updateUserBiographyAcrion = (body:string) => async (dispatch: Dispatch) => {
+export const updateUserBiographyAcrion = (body:string) => async (dispatch: AppDispatch) => {
   try{
     dispatch(setLoading());
     await axios.patch(`${API_URL_USERDATA}1`,{ userBiography  : body });
