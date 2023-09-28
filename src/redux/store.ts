@@ -1,13 +1,17 @@
 "use client"
 
 import {configureStore} from '@reduxjs/toolkit'
-import { userSlice } from './slices/userSlice'
-import { TypedUseSelectorHook, useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { TypedUseSelectorHook, useDispatch , useSelector } from 'react-redux';
+import userSlice  from './slices/userSlice'
+import jobSlice  from './slices/jopsSlice';
+import  saveJobsSlice  from './slices/savejobSlice';
 
 export const store = configureStore ({
   reducer:{
-    userhaz: userSlice.reducer
+    userhaz: userSlice ,
+    allJobs:  jobSlice,
+    saveJobs:  saveJobsSlice,
+
   }
 })
 
