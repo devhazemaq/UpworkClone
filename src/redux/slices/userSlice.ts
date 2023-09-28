@@ -50,6 +50,12 @@ export const userSlice = createSlice({
       state.isLoading = false;
       state.error = "";
     },
+    updateUserBiography: (state, action: PayloadAction<string>) => {
+      state.user[0].userBiography = action?.payload;
+      state.isLoading = false;
+      state.error = "";
+    },
+
     updateHourlyRate: (state, action: PayloadAction<number>) => {
       
       state.user[0].hourlyRate = action?.payload;
@@ -62,13 +68,13 @@ export const userSlice = createSlice({
 
 
 
-const { setLoading, setError, getUserInfo, updateJobTitle, updateHourlyRate } = userSlice.actions;
+const { setLoading, setError, getUserInfo, updateJobTitle, updateHourlyRate, updateUserBiography } = userSlice.actions;
 
 export const getUserInfoAction = () => async (dispatch: Dispatch) => {
   try {
     dispatch(setLoading());
     const { data } = await axios.get<userTypes[]>(`${API_URL_USERDATA}`);
-    console.log(data);
+    // console.log(data);
     dispatch(getUserInfo(data));
   } catch (error) {
     const errorrr = typeof error === "string" ? error : String(error);
@@ -96,6 +102,20 @@ export const updateHourlyRateAcrion = (body:string) => async (dispatch: Dispatch
     await axios.patch(`${API_URL_USERDATA}1`,{ hourlyRate : body });
     console.log(body)
     dispatch(updateHourlyRate(+body))
+
+  }catch (error) {
+    const errorrr = typeof error === "string" ? error : String(error);
+    console.log(error)
+    dispatch(setError(errorrr));
+  }
+}
+
+export const updateUserBiographyAcrion = (body:string) => async (dispatch: Dispatch) => {
+  try{
+    dispatch(setLoading());
+    await axios.patch(`${API_URL_USERDATA}1`,{ userBiography  : body });
+    console.log(body)
+    dispatch(updateUserBiography(body))
 
   }catch (error) {
     const errorrr = typeof error === "string" ? error : String(error);
