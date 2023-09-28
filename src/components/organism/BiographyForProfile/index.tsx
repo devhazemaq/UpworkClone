@@ -26,6 +26,7 @@ import {
   getUserInfoAction,
   updateHourlyRateAcrion,
   updateJobTitleAcrion,
+  updateUserBiographyAcrion,
 } from "@/redux/slices/userSlice";
 
 import { TextareaAutosize } from "@mui/base/TextareaAutosize";
@@ -271,9 +272,9 @@ const BiographyForProfile = () => {
 
   const dispatch = useAppDispatch();
 
-  const [openEditTitle, setOpenEditTitle] = React.useState(false);
-  const [openEditHourlyRate, setOpenEditHourlyRate] = React.useState(false);
-  const [openEditTxetBiography, setOpenEditTxetBiography] = React.useState(true);
+  const [openEditTitle, setOpenEditTitle] = useState(false);
+  const [openEditHourlyRate, setOpenEditHourlyRate] = useState(false);
+  const [openEditTxetBiography, setOpenEditTxetBiography] = useState(false);
 
   // ---------txtBiog
 
@@ -312,14 +313,13 @@ const BiographyForProfile = () => {
       dispatch(getUserInfoAction());
 
     }
-    console.log(user)
+    // console.log(user)
     localStorage.setItem("user1", JSON.stringify(user[0]))
 
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
-  // localStorage.setItem("user" , 1)
 
 
 
@@ -402,6 +402,8 @@ function SimpleDialogTxetBiography(props: SimpleDialogTxetBiographyProps) {
   const { onClose, open } = props;
   const [textFiledTitle, setTextFiledTitle] = useState("");
   const [txtBiogrFromStorge, setTxtBiogrFromStorge] = useState("");
+  const [valueBiographyAfterEdit, setValueBiographyAfterEdit] = useState("");
+
 
   const { user, isLoading } = useAppSelector((state) => state.userhaz);
 
@@ -414,31 +416,41 @@ function SimpleDialogTxetBiography(props: SimpleDialogTxetBiographyProps) {
   };
 
   const handelSave = () => {
-    if (textFiledTitle.length > 0) {
-      console.log(textFiledTitle);
-      // dispatch(updateJobTitleAcrion(textFiledTitle));
-      onClose(textFiledTitle);
+    if (valueBiographyAfterEdit) {
+      if (valueBiographyAfterEdit !== txtBiogrFromStorge) {
+        // console.log(valueBiographyAfterEdit);
+
+        dispatch(updateUserBiographyAcrion(valueBiographyAfterEdit));
+        onClose(valueBiographyAfterEdit);
+      }
     }
+
   };
   const handleClose = () => {
     // console.log(selectedValue)
     onClose(textFiledTitle);
   };
 
+  const handleChangeTexrarea = (e: any) => {
+    if (e.target) {
+      const text = e.target.value;
+      // console.log(text);
+      setValueBiographyAfterEdit(text);
 
+    }
+
+  }
 
 
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      // Perform localStorage action
       const name = localStorage.getItem('user1');
 
       const setTxtBiogrFromStorgeCallback = (previousName: string) => {
         if (name !== null) {
           const nameObj = JSON.parse(name);
-          console.log(nameObj);
-          console.log(nameObj.userBiography);
+          // console.log(nameObj.userBiography);
           return nameObj.userBiography;
         } else {
           console.log(previousName);
@@ -475,8 +487,11 @@ function SimpleDialogTxetBiography(props: SimpleDialogTxetBiographyProps) {
             </ul>
 
             <SmallText2 className="span__green" >Learn more</SmallText2>
-            
-            <textarea rows={10} placeholder={placeHoldTextDailogOverview} >
+
+            <textarea
+              rows={10}
+              placeholder={placeHoldTextDailogOverview}
+              onChange={handleChangeTexrarea}  >
 
               {`${txtBiogrFromStorge}`}
 
