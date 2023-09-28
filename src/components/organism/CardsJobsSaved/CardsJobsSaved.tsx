@@ -1,7 +1,7 @@
 'use client '
 
 import React, { useEffect, useState } from "react";
-import {  StyleMainCardsJobsSaved } from "./style";
+import { StyleMainCardsJobsSaved } from "./style";
 import { Body, SmallText, SmallText2 } from "@/components/atoms/typography";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
@@ -13,7 +13,9 @@ import PlaceIcon from '@mui/icons-material/Place';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import { API_URL_SAVEDJOBS } from "@/config/api";
-
+import { useAppDispatch, useAppSelector } from "@/redux/store";
+import { deletSsaveJopAction, getJobsSavedAction } from "@/redux/slices/savejobSlice";
+import DeleteIcon from '@mui/icons-material/Delete';
 interface Job {
 
 
@@ -39,30 +41,43 @@ interface Job {
   postTime: string;
 }
 const CardsJobsSaved = () => {
+
+  const dispatch = useAppDispatch();
+  const { saveJobs } = useAppSelector((state) => (state.saveJobs));
+
+  
+
   const [jobs, setJobs] = useState<Job[]>([]);
-
-  const [isLoading, setIsLoading] = useState(true);
-
-  const fetchData = async () => {
-    try {
-      const allData = await axios.get<Job[]>(`${API_URL_SAVEDJOBS}`);
-      // console.log(allData.data);
-      setJobs(allData.data);
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error);
-      setIsLoading(false);
-    }
-  };
+  // const [isLoading, setIsLoading] = useState(true);
+  // const fetchData = async () => {
+  //   try {
+  //     const allData = await axios.get<Job[]>(`${API_URL_SAVEDJOBS}`);
+  //     // console.log(allData.data);
+  //     setJobs(allData.data);
+  //     setIsLoading(false);
+  //   } catch (error) {
+  //     console.log(error);
+  //     setIsLoading(false);
+  //   }
+  // };
+  // fetchData();
 
   useEffect(() => {
-    fetchData();
+    dispatch(getJobsSavedAction())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // console.log(jobs);
+
+  const handleDeleteJobSave = (id:number) => {
+    dispatch(deletSsaveJopAction(id));
+    console.log(id)
+    console.log(typeof id)
+  }
+
+
   return (
     <StyleMainCardsJobsSaved>
 
-      {jobs?.map((job) => (
+      {saveJobs?.map((job) => (
         <div key={job?.id} className="card__contain">
           <Body as="h2" className="job__title">
             <a href="/">{job?.title}</a>
@@ -111,11 +126,8 @@ const CardsJobsSaved = () => {
 
 
           <div className="interaction___iconn">
-            <div className="favorite__and__dislike__contain for__hover__1">
-              <FavoriteBorderIcon />
-            </div>
-            <div className="favorite__and__dislike__contain for__hover__2">
-              <ThumbDownOffAltIcon />
+            <div className="favorite__and__dislike__contain for__hover__1" onClick={()=>{handleDeleteJobSave(job.id)}} > 
+              <DeleteIcon color="error" />
             </div>
           </div>
 
