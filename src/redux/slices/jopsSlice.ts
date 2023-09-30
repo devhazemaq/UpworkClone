@@ -12,16 +12,14 @@ export interface IJobState {
   isLoading: boolean;
   error: string | null;
   allJobs: IJob[] ;
-  
+  sjob: IJob | null; 
 }
-
 const initialState: IJobState = {
+  allJobs: [],
   isLoading: false,
   error: null,
-  allJobs: [],
-  
+  sjob : null,
 };
-
 export const jobSlice = createSlice({
   name: "allJobs",
   initialState,
@@ -37,18 +35,24 @@ export const jobSlice = createSlice({
       state.allJobs = action.payload;
       state.isLoading = false;
       state.error = "";
+    },
+    getSingleJob: (state, action:PayloadAction<IJob>) => {
+      state.sjob = action.payload;
+      state.isLoading = false;
+      state.error = "";
+
     }
     
 
   }
 });
 
-const {setLoading, setError , getJobs } = jobSlice.actions;
+const {setLoading, setError , getJobs, getSingleJob } = jobSlice.actions;
 
 export const getJobsAction = () => async (dispatch: AppDispatch) => {
   try{
     dispatch(setLoading());
-    const {data} = await axios.get<IJob[]>(`${API_URL_ALLJOPS}`);
+    const {data} = await axios.get(`${API_URL_ALLJOPS}`);
     // console.log(data);
     dispatch(getJobs(data))
   }
@@ -57,5 +61,21 @@ export const getJobsAction = () => async (dispatch: AppDispatch) => {
     console.log(errorrr);
   }
 }
+export const  getSingleJobAction = (id:number) => async (dispatch: AppDispatch) => {
+  try {
+    dispatch(setLoading())
+    const {data} = await axios.get(`${API_URL_ALLJOPS}/${id}`);
+    dispatch(getSingleJob(data));
+    console.log(id);
+    console.log(data);
+  }
+  catch(error){
+    const errorrr = typeof error === "string" ? error: String(error);
+    dispatch(setError(errorrr));
+    console.log(error)
+    console.log(id);
+  }
+}
+
 
 export default jobSlice.reducer;
