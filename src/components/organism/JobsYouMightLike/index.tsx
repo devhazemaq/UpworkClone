@@ -1,5 +1,5 @@
 
-import * as React from 'react';
+import  React, {useEffect, useState} from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
@@ -53,7 +53,7 @@ function a11yProps(index: number) {
 
 export default function BasicTabs() {
 
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
   const {saveJobs} = useAppSelector((state)=> state.saveJobs );
 
   
@@ -75,7 +75,6 @@ export default function BasicTabs() {
             <Tab label="Best Matches" {...a11yProps(0)} />
             {/* <Tab label="Saved Jobs" {...a11yProps(1)} /> */}
             <Tab label={saveJobs?.length > 0 ? `Saved Jobs(${saveJobs?.length})` : "Saved Jobs" } {...a11yProps(1)} />
-            {/* <Tab label="Item Three" {...a11yProps(2)} /> */}
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
