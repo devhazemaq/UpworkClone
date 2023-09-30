@@ -82,19 +82,18 @@ export const StyleLeftPart = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 26px;
-    
-    padding-left: ${paddleft};
+    gap: 32px;
+    padding-inline: 22px;
     width: 100%;
-    background: teal;
     padding-block: 20px 50px;
-    border: 1px solid ${theme.colors.colorBorder};
+    border: 1px solid #D5E0D5;
+    /* background: teal; */
+
 
     .cotain__levelexperience {
       display: flex;
       gap: 6px;
       width: 194px;
-      background: palegreen;
 
       svg {
         transform: scaleX(-1);
@@ -111,7 +110,6 @@ export const StyleLeftPart = styled.div`
       display: flex;
       gap: 6px;
       width: 130px;
-      background: tomato;
       span {
         display: block;
       }
@@ -123,7 +121,6 @@ export const StyleLeftPart = styled.div`
       display: flex;
       gap: 6px;
       width: 150px;
-      background: tan;
       span {
         display: block;
       }
@@ -135,7 +132,6 @@ export const StyleLeftPart = styled.div`
       display: flex;
       gap: 6px;
       width: 86px;
-      background: tan;
       span {
         display: block;
       }
@@ -146,8 +142,7 @@ export const StyleLeftPart = styled.div`
     .contain__fixed {
       display: flex;
       gap: 6px;
-      width: 100px;
-      background: tan;
+      width: 140px;
       span {
         display: block;
       }

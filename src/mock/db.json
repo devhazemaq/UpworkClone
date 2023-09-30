@@ -15,7 +15,7 @@
       "complexity": "hard",
       "jobType": "Fixed-price",
       "deadLine": "1 to 3 months",
-      "levelExperience": "Entry level",
+      "levelExperience": "entry",
       "hiringType": "full time",
       "budget": {
         "hourly": {
@@ -72,7 +72,7 @@
       "complexity": "Intermediate",
       "jobType": "Fixed-price",
       "deadLine": "3 to 6 months",
-      "levelExperience": "Intermediate",
+      "levelExperience": "intermediate",
       "hiringType": "part time",
       "budget": {
         "hourly": {
@@ -99,7 +99,7 @@
       "complexity": "Easy",
       "jobType": "Fixed-price",
       "deadLine": "1 to 2 months",
-      "levelExperience": "Entry level",
+      "levelExperience": "entry",
       "hiringType": "full time",
       "budget": {
         "hourly": {
@@ -126,7 +126,7 @@
       "complexity": "Easy",
       "jobType": "Hourly",
       "deadLine": "Ongoing",
-      "levelExperience": "Intermediate",
+      "levelExperience": "intermediate",
       "hiringType": "part time",
       "budget": {
         "hourly": {
@@ -153,7 +153,7 @@
       "complexity": "Intermediate",
       "jobType": "Fixed-price",
       "deadLine": "4 to 7 months",
-      "levelExperience": "Advanced",
+      "levelExperience": "expert",
       "hiringType": "full time",
       "budget": {
         "hourly": {
@@ -181,7 +181,7 @@
       "complexity": "Intermediate",
       "jobType": "Hourly",
       "deadLine": "Ongoing",
-      "levelExperience": "Advanced",
+      "levelExperience": "expert",
       "hiringType": "part time",
       "budget": {
         "hourly": {
@@ -196,43 +196,15 @@
       "postTime": "Posted 25 minutes ago"
     }
   ],
-  "savedJobs": [
-    {
-      "id": 6,
-      "title": "E-commerce Website Developer",
-      "description": "Looking for an experienced e-commerce website developer to build an online store from scratch. Knowledge of Shopify or WooCommerce is a plus.",
-      "jobSkills": [
-        "E-commerce",
-        "Web Development",
-        "Shopify",
-        "WooCommerce"
-      ],
-      "complexity": "Intermediate",
-      "jobType": "Fixed-price",
-      "deadLine": "4 to 7 months",
-      "levelExperience": "Advanced",
-      "hiringType": "full time",
-      "budget": {
-        "hourly": {
-          "from": null,
-          "to": null
-        },
-        "fixed": 5000
-      },
-      "image": "",
-      "proposals": "5 to 15",
-      "country": "Australia",
-      "postTime": "Posted 20 minutes ago"
-    }
-  ],
+  "savedJobs": [],
   "userData": [
     {
       "id": 1,
       "name": "Hazem A.",
       "image": "/assets/images/ ",
       "country": "Gaza, Palestinian Territories",
-      "jobTitle": "hhhhhhhh",
-      "hourlyRate": 15,
+      "jobTitle": "React devloper",
+      "hourlyRate": "23",
       "userBiography": "Hi I'm Front End. Hello and thanks for visiting My upwork. I am a front-end developer and mostly I am passionate about web coding. I'm an expert in using coding languages. I will use my skill and knowledge to complete a project successfully.",
       "userSkills": [
         "Js",
