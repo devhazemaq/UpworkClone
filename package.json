@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "serve-json": "json-server --watch src/mock/db.json --port 3005"
+    "hazem": "json-server --watch src/mock/db.json --port 3005"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
