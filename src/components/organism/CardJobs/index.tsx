@@ -101,99 +101,101 @@ const CardJobs = () => {
   return (
     <StyleMainCardJob>
       {allJobs?.map((job) => (
-        <div
-          key={job?.id}
-          className="card__contain"
-          // onClick={toggleDrawer(true)}
-          onClick={
-            toggleDrawer(true, job?.id)
-          }
+        <>
+          <div
+            key={job?.id}
+            className="card__contain"
+            // onClick={toggleDrawer(true)}
+            onClick={
+              toggleDrawer(true, job?.id)
+            }
 
+          // onClickCapture={toggleDrawer(true, job)}
 
-        // onClickCapture={toggleDrawer(true, job)}
+          >
+            <Body as="h2" className="job__title">
+              {job?.title}
+            </Body>
 
-        >
-          <Body as="h2" className="job__title">
-            {job?.title}
-          </Body>
+            {job?.jobType === "Fixed-price" && (
+              <SmallText className="Price__details">
+                {job?.jobType} - {job?.levelExperience} - Est. Budget: $
+                {job?.budget.fixed} - {job?.postTime}
+              </SmallText>
+            )}
+            {job?.jobType === "Hourly" && (
+              <SmallText className="Price__details">
+                {job?.jobType}: ${job?.budget.hourly.from}-$
+                {job?.budget.hourly.to} - {job?.levelExperience} - Est. Time: $
+                {job?.budget.fixed} - {job?.postTime}
+              </SmallText>
+            )}
 
-          {job?.jobType === "Fixed-price" && (
-            <SmallText className="Price__details">
-              {job?.jobType} - {job?.levelExperience} - Est. Budget: $
-              {job?.budget.fixed} - {job?.postTime}
+            <SmallText2 as="p" className="job__description">
+              {job?.description}
+            </SmallText2>
+
+            <Stack direction="row" spacing={1}>
+              {job?.jobSkills?.map((skill, index) => (
+                <Chip key={index} label={skill} />
+              ))}
+            </Stack>
+
+            <SmallText>
+              Proposals: <strong>{job?.proposals}</strong>
             </SmallText>
-          )}
-          {job?.jobType === "Hourly" && (
-            <SmallText className="Price__details">
-              {job?.jobType}: ${job?.budget.hourly.from}-$
-              {job?.budget.hourly.to} - {job?.levelExperience} - Est. Time: $
-              {job?.budget.fixed} - {job?.postTime}
-            </SmallText>
-          )}
 
-          <SmallText2 as="p" className="job__description">
-            {job?.description}
-          </SmallText2>
-
-          <Stack direction="row" spacing={1}>
-            {job?.jobSkills?.map((skill, index) => (
-              <Chip key={index} label={skill} />
-            ))}
-          </Stack>
-
-          <SmallText>
-            Proposals: <strong>{job?.proposals}</strong>
-          </SmallText>
-
-          <div className="contain__info__peyment">
-            <Image
-              src={"/assets/images/homeJops/verified.svg"}
-              alt="verified"
-              width={16}
-              height={16}
-            />
-            <SmallText>Payment verified</SmallText>
-            <Rating
-              name="text-feedback"
-              value={5}
-              readOnly
-              precision={0.5}
-              emptyIcon={
-                <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
-              }
-            />
-            <span className="contain__spent__and__country">
-              <span className="span__color">
-                <span className="span__color">$2</span>K+
+            <div className="contain__info__peyment">
+              <Image
+                src={"/assets/images/homeJops/verified.svg"}
+                alt="verified"
+                width={16}
+                height={16}
+              />
+              <SmallText>Payment verified</SmallText>
+              <Rating
+                name="text-feedback"
+                value={5}
+                readOnly
+                precision={0.5}
+                emptyIcon={
+                  <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+                }
+              />
+              <span className="contain__spent__and__country">
+                <span className="span__color">
+                  <span className="span__color">$2</span>K+
+                </span>
+                spent
+                <PlaceIcon fontSize="small" className="mui__placeicon" />
+                <span className="span__color">{job?.country}</span>
               </span>
-              spent
-              <PlaceIcon fontSize="small" className="mui__placeicon" />
-              <span className="span__color">{job?.country}</span>
-            </span>
-          </div>
-
-          <div className="interaction___iconn">
-            <div
-              className="favorite__and__dislike__contain for__hover__1"
-              onClick={(e) => {
-                handleFavoriteJob(e, job);
-                toggleFavoriteJob(job?.id);
-              }}
-            >
-              {jobFavorites[job?.id] ? (
-                <FavoriteIcon color="success" />
-              ) : (
-                <FavoriteBorderIcon />
-              )}
-
             </div>
-            <div className="favorite__and__dislike__contain for__hover__2">
-              <ThumbDownOffAltIcon />
+
+            <div className="interaction___iconn">
+              <div
+                className="favorite__and__dislike__contain for__hover__1"
+                onClick={(e) => {
+                  handleFavoriteJob(e, job);
+                  toggleFavoriteJob(job?.id);
+                }}
+              >
+                {jobFavorites[job?.id] ? (
+                  <FavoriteIcon color="success" />
+                ) : (
+                  <FavoriteBorderIcon />
+                )}
+
+              </div>
+              <div className="favorite__and__dislike__contain for__hover__2">
+                <ThumbDownOffAltIcon />
+              </div>
             </div>
+
+
+
           </div>
-
-
-          <Drawer 
+          <Drawer
             anchor={"right"}
             open={state["right"]}
             onClose={toggleDrawer(false)}
@@ -201,7 +203,7 @@ const CardJobs = () => {
 
             {list(idForJobCurent)}
           </Drawer>
-        </div>
+        </>
       ))}
     </StyleMainCardJob>
   );
