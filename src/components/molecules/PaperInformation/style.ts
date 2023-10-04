@@ -37,9 +37,12 @@ export const StyleMainPaperInformation = styled.div`
   }
   .for__paper:first-child, .for__paper:nth-child(2) {
     background: ${theme.colors.colorGreenPastel};
+    box-shadow: none;
   }
   .for__paper:nth-child(3) {
     border: 1px solid ${theme.colors.colorBorder};
+    box-shadow: none;
+
   }
   
 `;
