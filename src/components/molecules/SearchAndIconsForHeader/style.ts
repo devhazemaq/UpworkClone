@@ -6,7 +6,7 @@ export const StyleMainSearchAndIconsForHeader = styled.div`
 
   position: absolute;
   right: 10px;
-  top: 7px;
+  top: 12px;
 
 
     /* -s--- search part --- */
