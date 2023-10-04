@@ -16,7 +16,6 @@ export const StyleMainCategoriesForHeaderMain = styled.div`
   .fild__contain {
     width: 94px;
     background: transparent;
-    /* background: orange; */
     font-size: 14px;
 
     .for__margin__top {
@@ -75,7 +74,7 @@ export const StyleMainCategoriesForHeaderMain = styled.div`
   /* -e--- fild contain for nav --- */
 
   .fild__cont__1 {
-    width: 84px;
+    width: 88px;
     color: ${theme.colors.colorGreenYellow};
   }
   .fild__cont__2 {
