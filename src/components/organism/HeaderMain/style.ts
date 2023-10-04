@@ -9,7 +9,7 @@ export const StyleHeaderMain = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-inline: 16px;
-  padding: 10px 0;
+  padding: 20px 5px;
 
   .contain__elements {
     display: flex;
