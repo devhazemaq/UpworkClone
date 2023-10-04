@@ -17,6 +17,7 @@ import Image from 'next/image'
 import FooterMain from '@/components/organism/FooterMain'
 import SidebarLeftProfile from '@/components/organism/SidebarLeftProfile'
 import ContentRightProfile from '@/components/organism/ContentRightProfile'
+import { profileImg } from '@/constants'
 
 
 const ProfilePage = () => {
@@ -32,7 +33,7 @@ const ProfilePage = () => {
               <EditIcon fontSize='medium' className='icon__edit' />
               <Avatar
                 alt="Hazem Badran"
-                src="/assets/images/profile/hhh.jpg"
+                src={profileImg}
                 sx={{ width: 80, height: 80 }}
               />
               <RadioButtonCheckedIcon fontSize='small' className='icon__rdio' />

@@ -11,6 +11,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Badge from '@mui/material/Badge';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { StyleMainSearchAndIconsForHeader } from './style';
+import { profileImg } from '@/constants';
 
 
 
@@ -66,7 +67,7 @@ const SearchAndIconsForHeader = () => {
           
         <Avatar
                 alt="Hazem Badran"
-                src="/assets/images/profile/hhh.jpg"
+                src={profileImg}
                 sx={{ width: 40, height: 40 }}
               />
         </Stack>

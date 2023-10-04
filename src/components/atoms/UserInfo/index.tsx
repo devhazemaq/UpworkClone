@@ -6,6 +6,7 @@ import { StyleMainUserInfo } from './style'
 import { Avatar, Box, Stack } from '@mui/material'
 import Link from '@mui/material/Link';
 import { SmallText2 } from '../typography';
+import { profileImg } from '@/constants';
 
 const UserInfo = () => {
   return (
@@ -15,7 +16,7 @@ const UserInfo = () => {
         <Stack direction="row" spacing={2}>
         <Avatar
                 alt="Hazem Badran"
-                src="/assets/images/profile/hhh.jpg"
+                src={profileImg}
                 sx={{ width: 60, height: 60 }}
               />
         </Stack>
