@@ -73,23 +73,7 @@ const CategoriesForHeaderMain = () => {
       <div className="fild__contain fild__cont__4 ">
         <div className="for__margin__top">
           Messageas
-          <Image
-            src="/assets/images/homeJops/arowDown.svg"
-            alt="arowDown"
-            width={12}
-            height={12}
-            loading="eager"
-            priority={true}
-          />
         </div>
-        <span className="span__opt">
-          <span className="opt__0 opt__1">Proposals</span>
-          <span className="opt__0 opt__2">Saved Jobs</span>
-          <span className="opt__0 opt__3">Profile</span>
-          <span className="opt__0 opt__4">find Work</span>
-          <span className="opt__0 opt__5">My Stats</span>
-          <span className="opt__0 opt__6">My Project Dashboard</span>
-        </span>
       </div>
     </StyleMainCategoriesForHeaderMain>
   )

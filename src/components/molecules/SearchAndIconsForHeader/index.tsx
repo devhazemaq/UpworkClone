@@ -27,6 +27,7 @@ const SearchAndIconsForHeader = () => {
 
 
   return (
+    
     <StyleMainSearchAndIconsForHeader>
       <Box className="contain_textfield__contain">
 
@@ -45,9 +46,10 @@ const SearchAndIconsForHeader = () => {
             labelId="demo-simple-select-label"
             className="select__for__search"
             id="demo-simple-select"
-            value={age}
+            defaultValue='Job'
+            // value={age}
             // label="Age"
-            placeholder="nonono"
+            // placeholder="nonono"
             onChange={handleChange}
           >
             <MenuItem value={10}>Jobs </MenuItem>
