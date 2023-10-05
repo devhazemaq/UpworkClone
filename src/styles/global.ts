@@ -9,16 +9,13 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   margin: 0;
   transition: background-color 0.5s;
-  .css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop{
-    background: white;
-
-  }
+  
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden; 
+  /* max-width: 100vw; */
+  /* overflow-x: hidden;  */
 }
 
 /* body {
