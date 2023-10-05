@@ -19,9 +19,7 @@ import JobDatails from "../JobDatails";
 import { getJobsAction } from "@/redux/slices/jopsSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { saveNewJobAction } from "@/redux/slices/savejobSlice";
-import FavoriteIcon from '@mui/icons-material/Favorite';
-
-
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const CardJobs = () => {
   const dispatch = useAppDispatch();
@@ -29,17 +27,16 @@ const CardJobs = () => {
   const [count, setCount] = useState(0);
   const [idForJobCurent, setIdForJobCurent] = useState<number>(0);
 
-  const [jobFavorites, setJobFavorites] = useState<Record<string, boolean>>(
-    {}
-  );
-
+  const [jobFavorites, setJobFavorites] = useState<Record<string, boolean>>({});
 
   const [state, setState] = useState({ right: false });
 
   const toggleDrawer =
-    (open: boolean, idJob?: number) => (event: React.KeyboardEvent | React.MouseEvent) => {
-
-      if (typeof idJob === "number") { setIdForJobCurent(idJob) };
+    (open: boolean, idJob?: number) =>
+    (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (typeof idJob === "number") {
+        setIdForJobCurent(idJob);
+      }
 
       if (
         event.type === "keydown" &&
@@ -50,27 +47,7 @@ const CardJobs = () => {
       }
 
       setState((prevState) => ({ ...prevState, right: open }));
-
     };
-
-  const list = (idhaz: number) => (
-
-
-
-    <Box
-
-      sx={{ width: "1122px" }}
-      // sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-      role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
-
-    >
-      <HeaderForDrawer />
-      <JobDatails idhaz={idhaz} />
-    </Box>
-
-  );
 
   useEffect(() => {
     dispatch(getJobsAction());
@@ -78,16 +55,11 @@ const CardJobs = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-
-
-
   const handleFavoriteJob = (e: React.MouseEvent, job: IJob) => {
     e.stopPropagation();
     console.log("This is favotite job");
     dispatch(saveNewJobAction(job));
   };
-
-
 
   const toggleFavoriteJob = (jobId: number) => {
     setJobFavorites((prevState) => ({
@@ -95,8 +67,6 @@ const CardJobs = () => {
       [jobId]: !prevState[jobId],
     }));
   };
-
-
 
   return (
     <StyleMainCardJob>
@@ -106,12 +76,9 @@ const CardJobs = () => {
             key={job?.id}
             className="card__contain"
             // onClick={toggleDrawer(true)}
-            onClick={
-              toggleDrawer(true, job?.id)
-            }
+            onClick={toggleDrawer(true, job?.id)}
 
-          // onClickCapture={toggleDrawer(true, job)}
-
+            // onClickCapture={toggleDrawer(true, job)}
           >
             <Body as="h2" className="job__title">
               {job?.title}
@@ -185,23 +152,31 @@ const CardJobs = () => {
                 ) : (
                   <FavoriteBorderIcon />
                 )}
-
               </div>
               <div className="favorite__and__dislike__contain for__hover__2">
                 <ThumbDownOffAltIcon />
               </div>
             </div>
-
-
-
           </div>
           <Drawer
+            sx={{ backgroundColor: "transparent", opacity:"0.5" }}
             anchor={"right"}
             open={state["right"]}
             onClose={toggleDrawer(false)}
           >
-
-            {list(idForJobCurent)}
+            <Box
+              role="presentation"
+              onClick={toggleDrawer(false)}
+              onKeyDown={toggleDrawer(false)}
+              sx={{
+                width: "100%",
+                height: "100%",
+                padding: " 2px 23px 10px 20px",
+              }}
+            >
+              <HeaderForDrawer />
+              <JobDatails idhaz={idForJobCurent} />
+            </Box>
           </Drawer>
         </>
       ))}
