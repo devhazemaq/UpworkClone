@@ -24,6 +24,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 const CardJobs = () => {
   const dispatch = useAppDispatch();
   const { allJobs } = useAppSelector((state) => state.allJobs);
+
+
   const [count, setCount] = useState(0);
   const [idForJobCurent, setIdForJobCurent] = useState<number>(0);
 
@@ -32,10 +34,11 @@ const CardJobs = () => {
   const [state, setState] = useState({ right: false });
 
   const toggleDrawer =
-    (open: boolean, idJob?: number) =>
+    (open: boolean, job?:IJob ) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (typeof idJob === "number") {
-        setIdForJobCurent(idJob);
+      if (typeof job?.id === "number") {
+        setIdForJobCurent(job?.id);
+        localStorage.setItem("jobC", JSON.stringify(job))
       }
 
       if (
@@ -75,10 +78,8 @@ const CardJobs = () => {
           <div
             key={job?.id}
             className="card__contain"
-            // onClick={toggleDrawer(true)}
-            onClick={toggleDrawer(true, job?.id)}
-
-            // onClickCapture={toggleDrawer(true, job)}
+            onClick={toggleDrawer(true, job)}
+            
           >
             <Body as="h2" className="job__title">
               {job?.title}
@@ -171,10 +172,13 @@ const CardJobs = () => {
               sx={{
                 width: "100%",
                 height: "100%",
-                padding: " 2px 23px 10px 20px",
+                pt: "2px",
+                pr:"23px",
+                pb: "10px",
+                pl: "20px"
               }}
             >
-              <HeaderForDrawer />
+              <HeaderForDrawer  />
               <JobDatails idhaz={idForJobCurent} />
             </Box>
           </Drawer>

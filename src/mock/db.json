@@ -196,7 +196,37 @@
       "postTime": "Posted 25 minutes ago"
     }
   ],
-  "savedJobs": [],
+  "savedJobs": [
+    {
+      "id": 1,
+      "title": "Need freelancer for host apps.",
+      "description": "Hey, I need someone's help for publish my app on google play using draft. If you are interested, share your live app url so I can check the account. i will pay them fixed or monthly rent both. Thanks",
+      "jobSkills": [
+        "Java",
+        "Kotlin",
+        "JavaScript",
+        "Android",
+        "iOS",
+        "Smartphone"
+      ],
+      "complexity": "hard",
+      "jobType": "Fixed-price",
+      "deadLine": "1 to 3 months",
+      "levelExperience": "entry",
+      "hiringType": "full time",
+      "budget": {
+        "hourly": {
+          "from": 14,
+          "to": 25
+        },
+        "fixed": 35
+      },
+      "image": "",
+      "proposals": "less than 5",
+      "country": "United States",
+      "postTime": "Posted 1 minutes ago"
+    }
+  ],
   "userData": [
     {
       "id": 1,

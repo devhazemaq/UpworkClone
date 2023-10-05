@@ -18,7 +18,7 @@ const HeaderForDrawer = () => {
 
         </IconButton>
         <Box className="box__new__window">
-          <OpenInNewIcon  fontSize='small'/>  <Link href={"/job"}>Open job in a new window</Link>
+          <OpenInNewIcon  fontSize='small'/>  <Link href={"/openJob"}  target="_blank" >Open job in a new window</Link>
         </Box>
       </Box>
     </StyleMainHeaderForDrawer>
